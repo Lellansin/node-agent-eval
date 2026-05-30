@@ -5,7 +5,10 @@
   "keywords": ["agent", "eval", "claude-code", "aider", "benchmark", "coding-agent", "node"],
   "license": "MIT",
   "author": "Lellansin Huang",
-  "repository": "github:Lellansin/node-agent-eval",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lellansin/node-agent-eval.git"
+  },
   "type": "commonjs",
   "bin": {
     "node-agent-eval": "./bin/agent-eval.js"
