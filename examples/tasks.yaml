@@ -1,0 +1,23 @@
+name: "Sample Evaluation Suite"
+description: "Example tasks for testing agent-eval"
+tasks:
+  - id: hello-world
+    description: "Create a Python file called hello.py that prints 'Hello, World!' to stdout."
+    repo: "."
+    test_cmd: "python hello.py | grep -q 'Hello, World!'"
+    timeout_seconds: 60
+    tags: [python, simple]
+
+  - id: add-function
+    description: "Add a function called 'fibonacci(n)' to math_utils.py that returns the nth Fibonacci number. Must handle n=0 and n=1 as base cases."
+    repo: "."
+    test_cmd: "python -c \"from math_utils import fibonacci; assert fibonacci(0)==0; assert fibonacci(1)==1; assert fibonacci(10)==55; print('PASS')\""
+    timeout_seconds: 120
+    tags: [python, algorithm]
+
+  - id: fix-bug
+    description: "The function 'parse_csv' in data.py crashes on empty input. Fix it to return an empty list instead."
+    repo: "."
+    test_cmd: "python -c \"from data import parse_csv; assert parse_csv('')==[]; print('PASS')\""
+    timeout_seconds: 90
+    tags: [python, bugfix]

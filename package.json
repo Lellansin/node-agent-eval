@@ -1,0 +1,32 @@
+{
+  "name": "node-agent-eval",
+  "version": "0.1.0",
+  "description": "Compare coding agents head-to-head. Pass rate, cost, time, consistency — one command.",
+  "keywords": ["agent", "eval", "claude-code", "aider", "benchmark", "coding-agent", "node"],
+  "license": "MIT",
+  "author": "Lellansin Huang",
+  "repository": "github:Lellansin/node-agent-eval",
+  "type": "commonjs",
+  "bin": {
+    "node-agent-eval": "./bin/agent-eval.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "examples/"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "node bin/agent-eval.js"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "tap": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
